@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    min-height: 100vh;
+}
+
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  
+    .chat-height {
+      @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+    }
+    .inbox-height {
+      @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+    }
+  }
+  
+  /* third-party libraries CSS */
+  
+  .tableCheckbox:checked ~ div span {
+    @apply opacity-100;
+  }
+  .tableCheckbox:checked ~ div {
+    @apply border-primary bg-primary;
+  }
+  
+  .custom-input-date::-webkit-calendar-picker-indicator {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+  }
+  
+  [x-cloak] {
+    display: none !important;
+  }

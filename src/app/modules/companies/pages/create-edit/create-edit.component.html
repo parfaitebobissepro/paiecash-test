@@ -1,0 +1,56 @@
+<div class="max-w-screen-2xl mx-auto p-4 md:p-6 2xl:p-10">
+    <!-- Breadcrumb Start -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+      <h2 class="font-semibold text-title-md2 text-black dark:text-white">Créer une entreprise</h2>
+  
+      <nav>
+        <ol class="flex items-center gap-2">
+          <li><a href="index.html">Dashboard /</a></li>
+          <li class="text-primary">Créer une entreprise</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="grid">
+      <div class="flex flex-col gap-9">
+        <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+  
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="p-6.5">
+              <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                <div class="w-full xl:w-1/2"><label class="mb-2.5 block text-black dark:text-white">Name</label><input type="text" formControlName="name" placeholder="Enter your first name"
+                    class="w-full rounded border-[1.5px] text-black dark:text-white border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary">
+                </div>
+                <div class="w-full xl:w-1/2"><label class="mb-2.5 block text-black dark:text-white">UIN</label><input
+                    type="text" formControlName="uin" placeholder="Enter your uin"
+                    class="w-full rounded border-[1.5px] text-black dark:text-white border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary">
+                </div>
+              </div>
+              <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                <div class="w-full xl:w-1/2"><label class="mb-2.5 block text-black dark:text-white">Adress</label><input
+                    type="text" formControlName="address" placeholder="Enter your address"
+                    class="w-full rounded border-[1.5px] text-black dark:text-white border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary">
+                </div>
+                <div class="w-full xl:w-1/2"><label class="mb-2.5 block text-black dark:text-white">Phone</label><input
+                    type="tel" formControlName="phone" placeholder="Enter your phoneNumber"
+                    class="w-full rounded border-[1.5px] text-black dark:text-white border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary">
+                </div>
+              </div>
+              <div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                <div class="w-full xl:w-1/2"><label class="mb-2.5 block text-black dark:text-white">City</label><input type="text" formControlName="city" placeholder="Enter your city"
+                    class="w-full rounded border-[1.5px] text-black dark:text-white border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary">
+                </div>
+                <div class="w-full xl:w-1/2"><label class="mb-2.5 block text-black dark:text-white">webSite</label><input
+                    type="text" formControlName="website" placeholder="Enter your webSite"
+                    class="w-full rounded border-[1.5px] text-black dark:text-white border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary">
+                </div>
+              </div>
+              <div class="mb-4.5 flex flex-col gap-6 xl:flex-row"></div><span
+                class="px-6.5 py-0 text-danger block mb-2"></span><button type="submit" [disabled]="!form.valid"
+                class="flex justify-center rounded bg-primary p-3 font-medium text-gray float-right disabled:opacity-75"
+                style="margin: 10px;">Enregistrer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
